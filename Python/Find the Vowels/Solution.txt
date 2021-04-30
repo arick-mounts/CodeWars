@@ -1,0 +1,15 @@
+def vowel_indices(word):
+    # your code here
+    #define variable list to be filled with output
+    output = []
+    vowels = "aeiouyAEIOUY"
+    
+    #iterate through each character in the list
+    for i in range(0, len(word)):
+        #check each charachter if it's a substring of a string of all vowels
+        if word[i] in vowels:
+            output.append(i+1)
+    
+    #return output to caller
+    return output
+    
