@@ -1,0 +1,43 @@
+def min_permutation(n):
+    
+    #creates string to hold result
+    result = "";
+    # integer used to track if the input is positive or negative, assumes positive
+    pos = 1
+    #checks if input is negative
+    if n < 0:
+        #sets positive tracking variable to negative
+        pos = -1
+        
+    # sets n as positive if it is negative
+    n = n * pos
+    
+    #converts input to a list of strings and passes it to be sorted
+    myList = sortLowestAbsoluteVal(list(str(n)))
+    
+    #converts sorted list into string
+    for x in myList:
+        result += x
+    #converst string into integer, and restores it's proper sign
+    return int(result) * pos
+
+    pass
+
+def sortLowestAbsoluteVal(list):
+    #sorts the list
+    list.sort()
+    
+    #in order to avoid leading zeros, if the first element is zero, 
+    #we iterate through the list until we find the first non zero value and swap the two
+    if len(list) > 1:
+        if list[0] == "0":
+            i = 0
+            while i < len(list):
+                if list[i] != "0":
+                    list[0],list[i] = list[i],list[0]
+                    break
+                i += 1
+    
+    return list
+    
+    pass
