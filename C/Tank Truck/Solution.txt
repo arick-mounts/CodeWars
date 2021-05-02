@@ -1,0 +1,17 @@
+#define M_PI 3.14159265358979323846
+#include <math.h>
+
+int tankVol(int h, int d, int vt) {
+  // your code
+  double radius = (double) d/2;
+  
+  double length = (double)vt/(M_PI * pow(radius, 2) );
+  
+  double trianglesArea = ( radius - h ) * sqrt( ( 2 * radius * h ) - h * h ) ;
+  
+  double segmentArea =  acos( (radius - h) / radius)  * pow( radius, 2 )  - trianglesArea;
+  
+  return segmentArea * length;
+  
+  
+}
