@@ -1,0 +1,19 @@
+def connotation(strng):
+    #have fun!
+    #string of 'positive' letters
+    posLetters = "abcdefghijklm"
+    #integer to track positive and negative letters
+    pos = 0
+    #split strng into a list of 'words' to operate on
+    list = strng.split()
+    
+    #iterates through the list of words, 
+    for word in list:
+        #if the first letter is in the positive letter string increment pos, otherwise decrement it
+        if word[0].lower() in posLetters:
+            pos += 1        
+        else:
+            pos -= 1
+            
+    #if pos is greater than one return true, if it's less than return false
+    return pos >= 0

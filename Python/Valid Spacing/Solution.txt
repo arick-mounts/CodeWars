@@ -1,0 +1,4 @@
+def valid_spacing(s):
+    #checks if s starts with a space, ends with a space, or contains two spaces in a row, and returns the opposite boolean value
+    return not ("  " in s or s.startswith(" ") or s.endswith(" "))
+    pass

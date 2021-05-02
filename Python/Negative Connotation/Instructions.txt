@@ -1,0 +1,10 @@
+You will be given a string with sets of characters seperated by spaces (i.e. words).
+
+Looking at the first letter of each word (case insensitive-"A" and "a" should be treated the same), you need to determine whether it falls into the positive/first half of the alphabet ("a"-"m") or the negative/second half ("n"-"z").
+
+Return True if there are more (or equal) positive words than negative words, False otherwise.
+
+"A big brown fox caught a bad rabbit" => True
+"Xylophones can obtain Xenon." => False
+
+Link: https://www.codewars.com/kata/5ef0456fcd067000321baffa/python
