@@ -1,0 +1,7 @@
+from fractions import gcd
+
+def nbr_of_laps(x, y):
+    divisor = gcd(x,y)
+    outY = x / divisor
+    outX = y / divisor
+    return ( outX, outY)
