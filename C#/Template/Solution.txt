@@ -1,0 +1,25 @@
+public class Kata
+{
+  //function to check if the
+  public static int returnValid(int x){
+    if (x > 255)
+      return 255;
+    else if (x < 0)
+      return 0;
+    
+    return x;
+    
+  }
+  
+  public static string Rgb(int r, int g, int b) 
+  {
+    
+    r = returnValid(r);
+    g = returnValid(g);
+    b = returnValid(b);
+    
+    return r.ToString("X2") + g.ToString("X2") + b.ToString("X2") ;
+  }
+  
+  
+}
