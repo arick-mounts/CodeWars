@@ -1,0 +1,29 @@
+public class Kata
+{
+  //Main method to sum all triangular numbers
+  public static int sumTriangularNumbers(int n)
+  {
+    //If zero or negative return 0
+    if (n < 1)
+      return 0;
+    //Integer to track running total
+    int sum = 0;
+    
+    //Loops n times finding each triangular number lower than n and adding it to the sum
+    for (int i = 1; i <= n; i++){
+      sum += findTriangularNumber(i);
+    }
+    //Returns total of all triangular numbers
+    return sum;
+  }
+  
+  //Recursive method to find triangular numbers
+  public static int findTriangularNumber(int n){
+    //base case of N <= 1 return 1
+    if(n <= 1)
+      return 1;
+    //Recurisvely add n to all smaller triangular numbers
+    return n + findTriangularNumber(n - 1);
+    
+  }
+}
