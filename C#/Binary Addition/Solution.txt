@@ -1,0 +1,12 @@
+using System;
+
+public static class Kata
+{
+  public static string AddBinary(int a, int b)
+  {
+   // your code ...
+    int decSum = a + b;
+    
+    return Convert.ToString(decSum, 2);
+  }
+}
