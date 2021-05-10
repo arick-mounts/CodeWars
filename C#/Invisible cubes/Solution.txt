@@ -1,0 +1,14 @@
+using System;
+
+public class Kata
+{
+  public static int NotVisibleCubes(int n)
+  {
+    // your code!
+    int output = n - 2;
+    if (output <= 0){
+      return 0;
+    }
+    return output * output * output;
+  }
+}
