@@ -1,0 +1,10 @@
+def flip(d, a):
+    output = []
+    output.extend(a)
+
+    if d == 'R':
+        output.sort()
+    else:
+        output.sort(reverse = True)
+    
+    return output
