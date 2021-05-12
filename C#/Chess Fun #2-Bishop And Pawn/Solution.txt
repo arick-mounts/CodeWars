@@ -1,0 +1,12 @@
+namespace myjinxin
+{
+    using System;
+    
+    public class Kata
+    {
+        public bool BishopAndPawn(string bishop, string pawn){
+          //coding and coding..
+          return Math.Abs(bishop[0] - pawn[0]) == Math.Abs(bishop[1] - pawn[1]);
+        }
+    }
+}
