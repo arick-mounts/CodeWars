@@ -1,0 +1,13 @@
+def largest_pair_sum(numbers): 
+    # your code here
+    highest = -2147483648
+    secondHighest = -2147483648
+    
+    for i in numbers:
+        if i >= highest:
+            secondHighest = highest
+            highest = i
+        elif i >= secondHighest:
+            secondHighest = i
+    
+    return highest + secondHighest

@@ -1,0 +1,22 @@
+public class Kata
+{
+  public static int LargestPairSum(int[] numbers)
+  {
+    int highest = int.MinValue;
+    int secondHighest =  int.MinValue;
+    
+    foreach(int i in numbers)
+    {
+      if (i >= highest){
+        secondHighest = highest;
+        highest = i;
+      }    
+      else if(i >= secondHighest){
+        secondHighest = i;
+      }
+    }
+    
+    return highest + secondHighest;
+    
+  }
+}
