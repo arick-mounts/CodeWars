@@ -1,0 +1,7 @@
+def last_survivor(letters, coords): 
+    output = letters
+    
+    for i in coords:
+        output = output[:i] + output[i+1:]
+    
+    return output
