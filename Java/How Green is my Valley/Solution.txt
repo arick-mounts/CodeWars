@@ -1,0 +1,41 @@
+public class Valley {
+ 
+
+  public static int[] makeValley(int[] arr) {
+    int[] valley = new int[arr.length];
+    
+    
+    for (int i = 1; i < arr.length; i++) {
+      int curr = arr[i];
+      int j = i - 1;
+      
+      while (j >= 0 && arr[j] < curr) {
+          arr[j + 1] = arr[j];
+          j = j - 1;
+      }
+      arr[j + 1] = curr;
+    }
+    
+    int f = 0;
+    int b = arr.length - 1;
+    int i = 0;
+    
+    while (f <= b){
+      if(i+1 < arr.length){
+        valley[f] = arr[i];
+        valley[b] = arr[i+1];
+      }
+      if(f == b){
+        valley[f] = arr[i];
+        
+      }
+      i += 2;
+        f++;
+        b--;
+    }
+    
+    return valley;
+  }    
+  
+  
+}
