@@ -1,0 +1,27 @@
+import java.util.*;
+public class Shiritori
+{
+ public static List<String> theGame(List<String> words)
+  {   
+   List<String> output = new ArrayList<String>(); 
+   
+   
+   if(words.isEmpty() || words.get(0) == ""){
+     return output;
+   }
+   
+   
+   output.add(words.get(0));
+   
+   for(int i = 1; i < words.size() ; i++){
+     if (words.get(i) != "" && words.get(i - 1).charAt(words.get(i - 1).length() - 1) == words.get(i).charAt(0) ){
+       output.add(words.get(i));
+     }else{
+       break;
+     }
+   }
+
+    return output;
+  }
+
+}
