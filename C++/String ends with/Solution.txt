@@ -1,0 +1,15 @@
+#include <string>
+bool solution(std::string const &str, std::string const &ending) {
+    int strBack = str.length()-1;
+    int endingBack = ending.length()-1;
+    
+    while(endingBack >= 0){
+      if(ending.at(endingBack) != str.at(strBack)){
+        return false;
+      }
+      endingBack--;
+      strBack--;
+    }
+  
+    return true;
+}
