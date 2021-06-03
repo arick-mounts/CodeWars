@@ -1,0 +1,12 @@
+def the_janitor(word):
+    alpha = "abcdefghijklmnopqrstuvwxyz"
+    out = []
+    
+    for letter in alpha:
+        if (first := word.find(letter) )!= -1: 
+            last = word.rfind(letter) +1
+            out.append(last - first);
+        else:
+            out.append(0)
+    
+    return out
