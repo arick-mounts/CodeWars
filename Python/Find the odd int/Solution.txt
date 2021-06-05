@@ -1,0 +1,12 @@
+def find_it(seq):
+    dict = {}
+    
+    for i in seq:
+        if i not in dict.keys():
+            dict[i] = 1
+        else:
+            dict.update({i:(dict[i]+1)})
+            
+    for x, y in dict.items():
+        if y % 2 != 0:
+            return x
