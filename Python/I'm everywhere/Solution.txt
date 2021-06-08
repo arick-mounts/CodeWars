@@ -1,0 +1,15 @@
+def i(word):
+    vowels = "aeiou"
+    bal = 0
+    
+    for c in word:
+        if c.lower() in vowels:
+            bal+= 1
+        else:
+            bal -= 1
+                
+    if word == '' or word[0].islower() or word[0] == 'I' or bal >=0:
+        return "Invalid word"
+    else:
+        return "i"+word
+    #..
