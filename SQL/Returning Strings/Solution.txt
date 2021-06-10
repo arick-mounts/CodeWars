@@ -1,0 +1,2 @@
+SELECT 'Hello, ' ||  "name" || ' how are you doing?' AS "greeting"
+FROM "person"
