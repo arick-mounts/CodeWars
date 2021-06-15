@@ -1,0 +1,29 @@
+
+public class Kata {
+
+  public static int[] arrayDiff(int[] a, int[] b) {
+    
+    int[] output = new int[0];
+    
+    for(int i = 0; i < a.length; i++){
+    boolean found = false;
+      for(int j = 0; j < b.length; j++){
+        if(a[i] == b[j]){
+          found = true;
+        }
+      }
+      
+      if(found == false){
+        int[] temp = new int[output.length+1];
+        for(int x = 0; x < output.length; x++){
+          temp[x] = output[x];
+        }
+        temp[temp.length - 1] = a[i];
+        output = temp;
+      }
+    }
+    
+    return output;
+  }
+
+}
