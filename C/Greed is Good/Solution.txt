@@ -1,0 +1,30 @@
+int score(const int dice[5]) {
+  const int SIZE = 5;
+  int score = 0;
+  
+  int rolls[] = {0,0,0,0,0,0,0};
+  
+  for (int i = 0; i < SIZE; i ++){
+    rolls[dice[i]]++;
+  }
+  
+  for (int i = 1; i <= SIZE+1; i++){
+    if(rolls[i] >= 3){
+      if(i == 1){
+        score += 1000;
+      }else{
+        score += i * 100;
+      }
+      rolls[i] -= 3;
+    }
+    
+    if(i == 1){
+      score += rolls[i] * 100;
+    }else if(i == 5){
+      score += rolls[i] * 50;
+    }
+  }
+  
+  printf("%d", score);
+  return score;
+}
