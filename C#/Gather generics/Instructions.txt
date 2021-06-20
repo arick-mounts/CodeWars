@@ -1,0 +1,46 @@
+
+For this kata, we'd like to create and use a collection of parser types that implement a generic IParser interface.
+
+The following classes have been implemented and preloaded for us to use:
+
+class BaseValue {}
+
+class ValueTypeA : BaseValue {}
+
+class ValueTypeB : BaseValue {}
+
+class ParserTypeA : IParser<ValueTypeA>
+{
+  public ValueTypeA Parse(string value)
+    => new ValueTypeA();
+}
+
+class ParserTypeB : IParser<ValueTypeB>
+{
+  public ValueTypeB Parse(string value)
+    => new ValueTypeB();
+}
+
+class ParserClient
+{
+  public static List<BaseValue> ParseString(string str, List<IParser<BaseValue>> parsers)
+  {
+    // produce a list of values, one for each parser
+  }
+}
+With that, we'd like to write a program like this:
+
+public static List<BaseValue> GatherGenerics()
+{
+    var parsers = new List<IParser<BaseValue>>();
+    parsers.Add(new ParserTypeA());
+    parsers.Add(new ParserTypeB());
+    var values = ParserClient.ParseString("Parse me!", parsers);
+    return values;
+}
+Alas, there seems to be a problem: the code won't compile! Even though ValueTypeA and ValueTypeB are clearly derived from BaseValue. What gives?
+
+Your task:
+Given an initial implementation of the IParser interface, figure out a way to modify it such that the code above executes without errors.
+
+Link: https://www.codewars.com/kata/57fea63854685b1189000169
