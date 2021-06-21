@@ -1,0 +1,25 @@
+public class PositionAverage {
+   
+    public static double posAverage(String s) {
+        String[] str = s.split("\\s*,\\s*");
+      
+        int common = 0;
+        double length = str[0].length();
+        double sets = str.length * (str.length - 1) / 2;
+          
+          
+        for(int i = 0; i < str.length; i++){
+          for(int j = i + 1; j < str.length; j++){
+                                    
+            for (int x = 0; x < length ; x++){
+              if(str[i].charAt(x) == str[j].charAt(x)){
+                common++;
+                
+              }
+            }
+          }      
+        }
+      
+      return 100 *( common / (length * sets));
+    }
+}
