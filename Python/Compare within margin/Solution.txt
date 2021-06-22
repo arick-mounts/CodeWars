@@ -1,0 +1,11 @@
+using System;
+
+public class Kata
+{
+  public static int CloseCompare(double a, double b, double margin = 0)
+  {
+    if(Math.Abs(a - b) <= margin) return 0;
+    if(a < b) return -1;
+    else return 1;
+  }
+}
