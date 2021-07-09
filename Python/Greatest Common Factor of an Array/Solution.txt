@@ -1,0 +1,22 @@
+def getFactors(commonFactors, int):
+    
+    if commonFactors == None:
+        factors = []
+        for num in range(1,int+1):
+            if int % num == 0:
+                factors.append(num)
+        return factors
+    else:
+        output = []
+        output.extend(commonFactors)
+        for i in commonFactors:
+            if int % i != 0:
+                output.remove(i)
+        return output
+
+def greatest_common_factor(seq): 
+    factors = None
+    for i in seq:
+        factors = getFactors(factors,i)
+    
+    return max(factors)
