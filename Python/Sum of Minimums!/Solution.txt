@@ -1,0 +1,20 @@
+def get_min(numbers):
+    min = numbers[0]
+    
+    for i in numbers:
+        if i < min:
+            min = i
+    
+    return min
+
+
+
+def sum_of_minimums(numbers):
+    
+    result = 0
+    
+    for i in numbers:
+        result+=get_min(i)
+    
+    
+    return result

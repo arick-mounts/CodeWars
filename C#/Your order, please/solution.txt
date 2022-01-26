@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
+
+public static class Kata
+{
+  public static string Order(string words)
+  {
+    
+    if (words == ""){
+      return "";
+    }
+    
+    Dictionary<int, string> posWord = new Dictionary<int, string>();
+    
+    foreach(var word in words.Split(' ')){
+      posWord.Add(Int32.Parse(Regex.Match(word, @"\d+").Value), word);
+    }
+    
+    var result = posWord[1];
+    
+    for(int i = 2; i < 10 && i <= posWord.Count; i++){
+      
+      result += " " + posWord[i];
+    }
+    
+  
+    return result;
+  }
+}
