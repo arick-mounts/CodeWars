@@ -1,0 +1,30 @@
+public static class Kata
+{
+  public static int MAX_INT = 2147483647;
+  
+  public static void swapInts(ref int a, ref int b){
+    int temp = a;
+    a = b;
+    b = temp;
+  }
+  
+	public static int sumTwoSmallestNumbers(int[] numbers)
+	{
+    int lowest = MAX_INT, secondLowest = MAX_INT;
+    
+    foreach(int i in numbers){
+      if(i < lowest){
+        secondLowest = lowest;
+        lowest = i;
+      }
+      else if(i < secondLowest){
+        secondLowest = i;
+      }
+      
+    }
+    return lowest + secondLowest;
+	}
+}
+
+// O(n) iterate through the array and store the lowest and second lowest values
+// return the sum of lowest and second lowest

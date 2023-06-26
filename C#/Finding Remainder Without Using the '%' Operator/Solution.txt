@@ -1,0 +1,13 @@
+
+public class Kata
+{
+  public static int Remainder(int D, int d)
+  {  
+    return D - (d * (D / d));
+  }
+  
+  //find decimal remainder of division, multiply that by dividend 
+  //Could encounter floating point/rounding issues
+
+  //Better Solution: multiply d by D/d and subtract that from D
+}

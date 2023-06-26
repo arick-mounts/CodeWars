@@ -1,0 +1,11 @@
+class RemainderFinder {
+  
+  public static SimpleInteger remainder(SimpleInteger dividend, SimpleInteger divisor) {
+    return dividend.subtract(dividend.divide(divisor).multiply(divisor));
+  }
+  
+  //originally had a complicated system to separate the decimal remainder of the division and multiply that by the divisor
+  //requiring type casting and rounding to facilitate.
+
+  //found this much better/simpler solution to subtract the dividend from the divisor multiplied by the division.
+}

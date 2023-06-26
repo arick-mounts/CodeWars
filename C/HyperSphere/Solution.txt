@@ -1,0 +1,23 @@
+#include <stdbool.h>
+#include <stddef.h>
+#include <math.h>
+
+bool in_sphere(size_t z, const double coords[z], double radius) {
+     
+    //Variable to track sum of squared coords 
+    double coordSum = 0.0;
+    //Variable to track position iterating through the loop
+    size_t i = 0 ;
+    
+    while (i < z){
+      coordSum = coordSum + pow(coords[i], 2.0) ;
+      i++;
+    }
+    
+    if (coordSum <= pow(radius, 2.0)){
+      return true;
+    }
+    else {
+      return false;
+    }
+}
