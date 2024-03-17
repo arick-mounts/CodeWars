@@ -1,0 +1,1 @@
+const spacey = (array)=>(array.map((word,index,array)=>(array.slice(0,index+1).join(""))))
